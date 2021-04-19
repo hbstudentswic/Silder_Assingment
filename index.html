@@ -14,7 +14,39 @@
     <title>Frontend Starter</title>
   </head>
   <body>
-    <h1>Frontend Starter</h1>
+    <form>
+      <h1 class="text-center">Text Styler</h1>
+
+      <div>
+        <label for="input">Enter your Text</label>
+        <input type="Text" id="input" />
+      </div>
+
+      <div>
+        <input
+          type="range"
+          id="range-slider"
+          name="range-slider"
+          min="12"
+          max="27"
+        />
+        <label for="range-slider">Font Size</label>
+      </div>
+
+      <div>
+        <input
+          type="color"
+          id="color-changer"
+          name="color-changer"
+          id="color-changer"
+        />
+        <label for="color-changer">Font Color</label>
+      </div>
+
+      <div>
+        <p></p>
+      </div>
+    </form>
     <script src="./scripts.js" type="module"></script>
   </body>
 </html>
