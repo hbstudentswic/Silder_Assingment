@@ -8,11 +8,16 @@ const range = document.getElementById('range-slider');
 
 const color = document.getElementById('color-changer');
 
+const inputmin = document.getElementById('input-min');
+
+const inputmax = document.getElementById('input-max');
+
+const buttonmax = document.getElementById('max-button');
+
+const buttonmin = document.getElementById('min-button');
+
 input.addEventListener('keyup', () => {
   const inputValue = document.getElementById('input').value;
-
-  /* console.log(inputValue); JUST FOR TESTING */
-
   p.innerText = inputValue;
 });
 
@@ -22,4 +27,14 @@ range.addEventListener('input', event => {
 
 color.addEventListener('input', event => {
   root.style.setProperty('--color', event.target.value);
+});
+
+buttonmax.addEventListener('click', event => {
+  event.preventDefault();
+  document.querySelector('#font-size').min = 5;
+});
+
+buttonmin.addEventListener('click', event => {
+  event.preventDefault();
+  document.querySelector('#font-size').max = 900;
 });
